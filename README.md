@@ -32,27 +32,18 @@
 
 ## Links Importantes
 
-- **Repositório GitHub**  
-  <https://github.com/EngSoft2025/orcid-project-grupo-um>
-
 - **Backlog & Sprints (Notion)**  
   <!-- substitua pelo link real de leitura → -->
-  <https://www.notion.so/sci-graph-backlog>
+  https://www.notion.so/P-gina-de-projeto-Sci-Graph-1fae657a23738016b1a3e08346491a32?source=copy_link
 
 - **Plano do Projeto**  
-  `docs/Plano_Projeto.pdf` &nbsp;·&nbsp; *(versão final em PDF dentro do repositório)*
+  https://onedrive.live.com/:w:/g/personal/1A05459C73E3EC3E/EZ2d58ELecVPqg_nPd7aNOkBA0R0f22GX1un6DW9wOZkxw?resid=1A05459C73E3EC3E!sc1e79d9d790b4fc5aa0fe73ddeda34e9&ithint=file%2Cdocx&e=zyzPha&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xYTA1NDU5YzczZTNlYzNlL0VaMmQ1OEVMZWNWUHFnX25QZDdhTk9rQkEwUjBmMjJHWDF1bjZEVzl3T1preHc_ZT16eXpQaGE
 
 - **Especificação de Requisitos (ERS)**  
-  `docs/ERS_SciGraph.pdf`
+  https://onedrive.live.com/personal/1a05459c73e3ec3e/_layouts/15/Doc.aspx?sourcedoc=%7B50692f6d-77c8-487c-a659-1442a23238ca%7D&action=default&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xYTA1NDU5YzczZTNlYzNlL0VXMHZhVkRJZDN4SXBsa1VRcUl5T01vQms2LTFPbWhnOVBZMWFOaGVBVUxXS2c_ZT1id1plb0o&slrid=00000000-0000-0000-0000-000000000000&originalPath=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xYTA1NDU5YzczZTNlYzNlL0VXMHZhVkRJZDN4SXBsa1VRcUl5T01vQms2LTFPbWhnOVBZMWFOaGVBVUxXS2c_cnRpbWU9MENtVENHbXMzVWc&CID=cb2c14d8-f73e-4667-948c-dc325e0cd85e&_SRM=0:G:72
 
 - **Entrevistas com docentes**  
-  `docs/entrevistas/` *(áudios + transcrições)*
-
-- **Demo em Produção (Vercel)**  
-  <https://sci-graph.vercel.app>
-
-- **Storybook de Componentes**  
-  `docs/storybook-static/index.html`
+  https://docs.google.com/document/d/1coHijbWYTLFooeOFElBToIAFSiWMCZjH9Cu4AjwW9zE/edit?tab=t.0
 
 ---
 
