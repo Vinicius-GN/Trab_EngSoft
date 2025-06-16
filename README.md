@@ -2,16 +2,14 @@
 <p align="center">Projeto da disciplina SCC0130 – Engenharia de Software (2025.1)</p>
 
 <p align="center">
-  <a href="#estrutura-do-projeto">Estrutura do Projeto</a> • 
+  <a href="#links-importantes">Links&nbsp;Importantes</a> •
+  <a href="#estrutura-do-projeto">Estrutura&nbsp;do&nbsp;Projeto</a> • 
   <a href="#instalação-e-uso">Instalação&nbsp;e&nbsp;Uso</a> • 
   <a href="#objetivo">Objetivo</a> • 
   <a href="#metodologia-e-governança">Metodologia&nbsp;e&nbsp;Governança</a> • 
   <a href="#tecnologias">Tecnologias</a> • 
-  <a href="#estrutura-de-branches">Estrutura&nbsp;de&nbsp;Branches</a> • 
-  <a href="#testes">Testes</a> • 
   <a href="#cumprimento-dos-requisitos">Cumprimento&nbsp;dos&nbsp;Requisitos</a> • 
   <a href="#cronograma">Cronograma</a> • 
-  <a href="#riscos">Gerenciamento de Riscos</a> •
   <a href="#contribuição">Contribuição</a> •
   <a href="#licença">Licença</a> •
   <a href="#agradecimentos">Agradecimentos</a>
@@ -32,200 +30,164 @@
 
 ## Links Importantes
 
-- **Backlog & Sprints (Notion)**  
-  <!-- substitua pelo link real de leitura → -->
-  https://www.notion.so/P-gina-de-projeto-Sci-Graph-1fae657a23738016b1a3e08346491a32?source=copy_link
-
-- **Plano do Projeto**  
-  https://onedrive.live.com/:w:/g/personal/1A05459C73E3EC3E/EZ2d58ELecVPqg_nPd7aNOkBA0R0f22GX1un6DW9wOZkxw?resid=1A05459C73E3EC3E!sc1e79d9d790b4fc5aa0fe73ddeda34e9&ithint=file%2Cdocx&e=zyzPha&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xYTA1NDU5YzczZTNlYzNlL0VaMmQ1OEVMZWNWUHFnX25QZDdhTk9rQkEwUjBmMjJHWDF1bjZEVzl3T1preHc_ZT16eXpQaGE
-
-- **Especificação de Requisitos (ERS)**  
-  https://onedrive.live.com/personal/1a05459c73e3ec3e/_layouts/15/Doc.aspx?sourcedoc=%7B50692f6d-77c8-487c-a659-1442a23238ca%7D&action=default&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xYTA1NDU5YzczZTNlYzNlL0VXMHZhVkRJZDN4SXBsa1VRcUl5T01vQms2LTFPbWhnOVBZMWFOaGVBVUxXS2c_ZT1id1plb0o&slrid=00000000-0000-0000-0000-000000000000&originalPath=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy8xYTA1NDU5YzczZTNlYzNlL0VXMHZhVkRJZDN4SXBsa1VRcUl5T01vQms2LTFPbWhnOVBZMWFOaGVBVUxXS2c_cnRpbWU9MENtVENHbXMzVWc&CID=cb2c14d8-f73e-4667-948c-dc325e0cd85e&_SRM=0:G:72
-
-- **Entrevistas com docentes**  
-  https://docs.google.com/document/d/1coHijbWYTLFooeOFElBToIAFSiWMCZjH9Cu4AjwW9zE/edit?tab=t.0
+| Tipo de artefato                               | Descrição / Conteúdo                                   | Link |
+|------------------------------------------------|--------------------------------------------------------|------|
+| **Backlog & Sprints (Notion)**                 | Página inicial do projeto                              | <https://www.notion.so/P-gina-de-projeto-Sci-Graph-1fae657a23738016b1a3e08346491a32> |
+|                                                | Página de controle / backlog e tarefas                 | <https://www.notion.so/1fae657a2373800b80f2f814c37862fb?v=1fae657a2373808097fb000cdc415533> |
+| **Plano do Projeto**                           | Escopo, cronograma macro, matriz de riscos             | <https://onedrive.live.com/:w:/g/personal/1A05459C73E3EC3E/EZ2d58ELecVPqg_nPd7aNOkBA0R0f22GX1un6DW9wOZkxw> |
+| **Especificação de Requisitos (ERS)**          | Documento completo (versão final) - Modelagem UML, casos de uso, casos de teste, requisitos funcionais e não funcionais.                    | <https://onedrive.live.com/personal/1a05459c73e3ec3e/_layouts/15/Doc.aspx?src=ERS> |
+| **Entrevistas com docentes**                   | Transcrição Entrevista - 1                                   | <https://docs.google.com/document/d/1coHijbWYTLFooeOFElBToIAFSiWMCZjH9Cu4AjwW9zE/> |
+|                                                | Transcrição Entrevistas - 2                                   | <https://docs.google.com/document/d/1fcnohqzOVHcL6FkHIV_qWi4f4LTkoDWDFn9dg8jpnWU/> |
+| **Deploy (Vercel)**                     | Aplicação em produção                                  | <https://sci-graph.vercel.app> |
+| **Vídeo de apresentação final**                | Gravação (8 min) - walkthrough do produto              | <https://youtu.be/XXXXXXXXXXX> |
 
 ---
 
 ## <div id="estrutura-do-projeto"></div>Estrutura do Projeto
 
 ```text
-├── assets/              # Imagens, ícones e gifs de demo
-├── docs/                # Plano, requisitos, atas, métricas de sprint
-├── public/              # Arquivos estáticos servidos pelo Vite
-├── src/
-│   ├── components/      # React components
-│   ├── pages/           # Páginas de rota
-│   ├── hooks/           # Hooks reutilizáveis
-│   └── services/        # Camada de acesso à API ORCID
-├── .github/
-│   └── workflows/       # CI (lint, build, tests)
-├── README.md
-├── package.json
-└── vite.config.js
+├── api-tests/           # scripts de prova-de-conceito e mocks de requisições ORCID
+├── basic-api/           # protótipo inicial de consumo da API pública
+├── public/              # arquivos estáticos copiados 1-a-1 no build (favicon, robots, etc.)
+├── src/                 # código-fonte da aplicação React
+│   └── …                # (components, pages, hooks, services…)
+├── .gitignore           # exclusões de versionamento
+├── API.md               # guia rápido: autenticação e endpoints ORCID usados
+├── README.md            # este documento
+├── bun.lockb            # lockfile gerado pelo Bun (opcional ao npm/yarn)
+├── components.json      # mapeamento para Storybook / Vite Component Analyzer
+├── eslint.config.js     # regras de lint + Prettier
+├── index.html           # shell HTML servido em modo SPA
+├── package.json         # metadados, scripts e dependências
+├── package-lock.json    # lockfile npm
+├── postcss.config.js    # plugins PostCSS (inclui Tailwind)
+├── tailwind.config.ts   # tema e safelist do Tailwind CSS
+├── tsconfig.json        # base TS compiler options
+├── tsconfig.app.json    # TS options específicos da build web
+├── tsconfig.node.json   # TS options para scripts Node/CLI
+└── vite.config.ts       # configuração do bundler Vite
 ```
 
 ---
-
 <!-- ==================== Objetivo ==================== -->
 <div id="objetivo"></div>
 
 ## Objetivo
 
-- **Resolver** limitações de usabilidade do ORCID original.  
-- **Exibir** grafo interativo (≤ 300 nós) com filtros por período, área de pesquisa e grau de colaboração.  
-- **Entregar** métricas de produtividade (citações, h-index, centralidade) em ≤ 4 s.  
-- **Disponibilizar** testes, documentação e CI completos para fácil manutenção.
+O **Sci-Graph** tem por missão **tornar visível e navegável a teia de colaborações científicas** hoje escondida em bases dispersas (ORCID, Semantic Scholar e afins). A seguir sintetizamos as metas do MVP (versão 1.0), alinhadas ao documento de requisitos e às discussões deste repositório:
+
+1. **Unificar múltiplas fontes de dados**  
+   - Consumir simultaneamente **ORCID (identidade + afiliação)** e **Semantic Scholar (publicações + coautorias)**, abstraindo diferenças de formato e latência.  
+   - Implementar _fallback_ para cache local quando as APIs externas estiverem indisponíveis.
+
+2. **Oferecer visualização orientada a descobertas**  
+   - Renderizar um **grafo interativo de até 300 nós** com WebGL (Sigma.js) – número definido como compromisso entre legibilidade e desempenho nos testes de esforço.  
+   - Disponibilizar filtros dinâmicos (período, área de pesquisa, instituição e grau de colaboração) que se apliquem em **≤ 3 s**.
+
+3. **Detalhar métricas acadêmicas no contexto correto**  
+   - Calcular em tempo real **citações, h-index, grau de centralidade e comunidades** do nó selecionado, exibindo resultados em painéis pop-up.  
+   - Garantir **tempo-to-interactive ≤ 4 s** para consultas típicas (métrica validada pelo Lighthouse CI).
+
+4. **Ser inclusivo e fácil de usar**  
+   - Interface **responsiva** para desktop, notebook e tablets (≥ 768 px).  
+   - Compatível com **Chrome e Firefox** nas versões estáveis atuais.  
+   - Adoção de ícones, cores e mensagens de erro que não exijam conhecimento técnico avançado.
+
+5. **Manter rastreabilidade e qualidade de engenharia**  
+   - Todo requisito funcional possui **caso de uso + caso de teste + especificação Cypress** (vide `docs/test-cases.md`).  
+   - Pipeline de CI roda lint, teste unitário, teste E2E, _build_ e _preview_ em cada _pull request_.
 
 ---
-
-<!-- ==================== Metodologia e Governança ==================== -->
-<div id="metodologia-e-governança"></div>
 
 ## Metodologia e Governança
 
-| Artefato                     | Ferramenta / Local                  | Frequência              |
-|------------------------------|-------------------------------------|-------------------------|
-| **Backlog & board**          | Notion                              | Tempo real              |
-| **Sprint planning & review** | Google Meet                         | Quinzenal               |
-| **Daily / weekly sync**      | Notion checklist + Discord stand-up | Semanal                 |
-| **Retrospectiva**            | Notion template + FunRetro          | Ao final de cada sprint |
+Para o **Sci-Graph** adotamos um **Scrum “enxuto”** adaptado às restrições acadêmicas:
 
-> **Governança de qualidade:** ESLint + Prettier • Husky (pre-commit) • CI GitHub Actions.
+* **Sprints quinzenais (14 dias)** — foco em entregar incrementos testáveis; metas são negociadas no 1º dia e revisadas no 14º.  
+* **Rituais semanais** — mesmo em ciclos de 2 semanas, fazemos uma *sync call* curta aos docmingos para alinhar impedimentos e dividir as tarefas da semana.  
+* **Papéis claros** —  
+  * **Product Owner (PO)**: *Vinicius G. Neves* — prioriza backlog, valida entregas.  
+  * **Scrum Master / PM**: *Felipe V. de Oliveira* — remove bloqueios, cuida dos ritos e da qualidade do processo.  
+  * **Developers**: *Vinicius G.*, *Felipe V.* e *Luiz F. Catuzzi* — todos codificam, criam testes e revisam PRs (modelo *cross-functional*).  
+* **Relatórios de sprint** — ao final de cada ciclo publicamos **print quinzenal** no Notion: tarefas e reuniões feitas.  
+* **Definição de Pronto (DoD)** — uma história só é encerrada após testes e aprovação do PO.
+
+| Artefato / Prática           | Ferramenta / Local                              | Ritmo / SLA                               |
+|------------------------------|-------------------------------------------------|-------------------------------------------|
+| **Backlog & Board**          | Notion (Product Backlog + Kanban)               | Atualização em tempo real                 |
+| **Sprint Planning**          | Google Meet (30 min) + checklist Notion         | 1º dia da sprint                          |
+| **Relatório / Print da Sprint** | Página Notion “Sprint-N Retrospective”       | Até 24 h após o fim da sprint             |
+| **Definition of Done (DoD)** | Testes verdes • cobertura ≥ 80 % • lint ok • story aceita pelo **PO** | Bloqueia merge se falhar                 |
 
 ---
-
 <!-- ==================== Tecnologias ==================== -->
 <div id="tecnologias"></div>
 
 ## Tecnologias
 
-| Camada                | Stack                                                     |
-|-----------------------|-----------------------------------------------------------|
-| **Front-end**        | React 18 + Vite, Zustand (state), Tailwind CSS            |
-| **Requests**         | Axios + retry/back-off                                    |
-| **Visualização grafo**| Sigma.js + WebGL                                         |
-| **Testes**           | Vitest (unit), Cypress (E2E), Lighthouse (performance)     |
-| **Dev-Ops**          | GitHub Actions (CI) + Vercel (deploy preview)             |
-
----
-
-<!-- ==================== Estrutura de Branches ==================== -->
-<div id="estrutura-de-branches"></div>
-
-## Estrutura de Branches
-
-- **main** – release estável  
-- **develop** – integração contínua da sprint corrente  
-- **feature/&lt;nome-da-feature&gt;** – uma branch por _user story_  
-- **hotfix/&lt;nome-do-hotfix&gt;** – correções emergenciais em produção  
-
----
-
-<!-- ==================== Testes ==================== -->
-<div id="testes"></div>
-
-## Testes
-
-| Nível            | Ferramenta        | Alvo                               |
-|------------------|-------------------|------------------------------------|
-| **Unitário**     | Vitest            | Hooks, reducers, utils             |
-| **Componente**   | Testing Library   | Render e interação                 |
-| **Funcional/E2E**| Cypress           | Fluxos UC-01 … UC-04               |
-| **Desempenho**   | Lighthouse CI     | TTI ≤ 4 s, CLS < 0.1               |
-
-*Casos de teste completos: `docs/test-cases.md` (10 CTs cobrindo RF-001 … RF-010).*
+| Camada / Domínio        | Stack / Ferramentas                                                                  |
+|-------------------------|--------------------------------------------------------------------------------------|
+| **Front-end**           | React 18 • TypeScript • Vite                                                         |
+| **UI & Estilo**         | Tailwind CSS • Headless UI                                                           |
+| **APIs externas**       | **ORCID Public API v3** _(dados de autor)_ • **Semantic Scholar Graph API v1** _(publicações e coautorias)_ |
+| **Dev-Ops**             | GitHub              |
 
 ---
 
 <!-- ==================== Cumprimento dos Requisitos ==================== -->
 <div id="cumprimento-dos-requisitos"></div>
 
+<!-- ==================== Cumprimento dos Requisitos ==================== -->
+<div id="cumprimento-dos-requisitos"></div>
+
 ## Cumprimento dos Requisitos
 
-| Categoria         | Requisito                 | Status | Evidência / Link              |
-|-------------------|---------------------------|:------:|-------------------------------|
-| **Documentação**  | Plano do projeto          | ✔      | `docs/Plano_Projeto.pdf`      |
-|                   | Entrevistas & ERS         | ✔      | `docs/ERS_SciGraph.pdf`       |
-|                   | Modelagem UML             | ✔      | `docs/modelagem/`             |
-|                   | Casos de uso              | ✔      | `docs/casos_uso.pdf`          |
-|                   | Casos de teste            | ✔      | `docs/test-cases.md`          |
-| **Desenvolvimento** | Processo SCRUM         | ✔      | Notion board / velocity chart |
-|                   | Organização de tarefas    | ✔      | Issues + GitHub Projects      |
-| **Produto**       | Funcionalidades mínimas   | ✔      | Demo video / Vercel app       |
-|                   | Código documentado        | ✔      | README + JSDoc                |
-|                   | Usabilidade               | ↗      | Teste heurístico – sprint 4   |
-|                   | Apresentação final        | 🕓     | 27 / 06 / 2025                |
+| Categoria             | Item Avaliado                        | Status | Evidência / Link                                                                                                    |
+|-----------------------|--------------------------------------|:------:|----------------------------------------------------------------------------------------------------------------------|
+| **Documentação**      | **Plano do Projeto**                 | ✔      | OneDrive: Plano v1 (`Plano do Projeto` na seção **Links Importantes**)                                               |
+|                       | **Especificação de Requisitos (ERS)**| ✔      | OneDrive: ERS final (inclui UML, casos de uso & teste) na seção **Links Importantes**                                                               |
+|                       | **Entrevistas com docentes**         | ✔      | Google Docs Entrevista 1 & 2 (links na seção **Links Importantes**)                                                  |
+| **Desenvolvimento**   | **Processo SCRUM**                   | ✔      | Notion board na seção **Links Importantes**                                                                                   |
+|                       | **Organização de tarefas**           | ✔      | Realizadas durante as reuniões semanais e pelo grupo de Whatsapp                                                                                   |
+| **Produto**           | **Funcionalidades concluídas**          | ✔      | Todos os requisitos dispostos foram cumpridos, apesar de ter havido alteraçoes nos requisitos e ferramentas inicialmente planejadas                                                                       |
+|                       | **Código documentado**               | ✔      | README + comentários em código                                                                                           |
+|                       | **Usabilidade**                      | ↗      | Código modularizado e bem organizado                                                                                     |
+|                       | **Apresentação final**               | 🕓     | Vídeo (8 min) + slides – link na seção **Links Importantes*                       |
+
+---
 
 ### Detalhamento dos requisitos cumpridos
 
-- **Plano do projeto**  
-  - Arquivo `docs/Plano_Projeto.pdf` descreve escopo, cronograma Gantt, matriz de riscos e baseline de esforço (PERT).
+- **Plano do Projeto**  
+  - Documento no OneDrive detalha escopo, cronograma e matriz de riscos; versãoada a cada sprint.
 
-- **Entrevistas & ERS**  
-  - Pasta `docs/entrevistas/` contém transcrições e gravações das três entrevistas com docentes.  
-  - Síntese e priorização (MoSCoW) reunidas no documento `docs/ERS_SciGraph.pdf`.
+- **Especificação de Requisitos (ERS)**  
+  - Arquivo único contém: requisitos funcionais & não-funcionais, **modelagem UML**, **casos de uso** e **casos de teste**; revisões 0.1 → 1.0 registradas.
 
-- **Modelagem UML**  
-  - Diagramas de casos de uso, classes e sequência gerados no StarUML estão em `docs/modelagem/` (arquivos `.png` + `.mdj`).
-
-- **Casos de uso**  
-  - Fluxos principais e alternativos (UC-01 → UC-04) descritos em `docs/casos_uso.pdf`, com rastreabilidade direta aos requisitos funcionais.
-
-- **Casos de teste**  
-  - Conjunto de 10 CTs em `docs/test-cases.md`; automação Cypress em `cypress/e2e/`.  
-  - Cobertura de linhas Vitest: **86 %**.
+- **Entrevistas com docentes**  
+  - Duas transcrições Google Docs anexadas; insumos usados para criar e refinar backlog no inicio do projeto.
 
 - **Processo SCRUM**  
-  - Backlog, sprints e velocity chart mantidos no Notion (link na seção _Links_). Exportes em `docs/scrum/`.
+  - Sprints quinzenais no Notion; cada encerramento gera impressão (“print quinzenal”) para registro de tarefas e mudanças/imprevistos.
 
-- **Organização de tarefas**  
-  - Issues rotuladas (_user-story_, _bug_, _tech-debt_) e ligadas a PRs no GitHub Projects Kanban.
-
-- **Funcionalidades mínimas**  
-  - Implementadas: **busca**, **filtros avançados**, **pop-up de metadados**, **explorar sub-rede** e **agrupamento por publicação**.  
-  - Demo pública: <https://sci-graph.vercel.app>.
-
-- **Código documentado**  
-  - Comentários JSDoc em `src/`; Storybook gerado em `docs/storybook-static/`.
-
-- **Usabilidade**  
-  - Relatório das 10 heurísticas de Nielsen em `docs/usability-report.pdf`; correções de acessibilidade aplicadas na sprint 5.
-
-- **Apresentação final**  
-  - Slides (`docs/presentation/slides.pdf`) e vídeo demo (`docs/presentation/demo.mp4`).  
-  - Sessão de apresentação marcada para **27 / 06 / 2025 às 15 h**.
-
+- **Funcionalidades implementadas**  
+  - Implementadas: busca, filtros, pop-up de metadados, exploração de sub-rede, agrupamento por publicação; todas acessíveis na versão final do sistema.
 
 ---
 
 <!-- ==================== Cronograma ==================== -->
 <div id="cronograma"></div>
 
-## Cronograma (sprints = 2 semanas)
+## Cronograma (sprints quinzenais)
 
-| Sprint | Período          | Incremento chave                               |
-|------: |------------------|-----------------------------------------------|
-|   1    | 05 – 19 / 04     | Setup repo, boilerplate, ERS v1               |
-|   2    | 20 / 04 – 03 / 05| Grafo MVP (busca + render)                    |
-|   3    | 04 – 17 / 05     | Filtros avançados + testes unitários          |
-|   4    | 18 – 31 / 05     | Pop-up de metadados + E2E                     |
-|   5    | 01 – 14 / 06     | Refino UX + perf. + beta                      |
-|   6    | 15 – 22 / 06     | Congelamento, demo e documentação             |
+| Sprint | Período            | Objetivos principais                                                                                           | Entregáveis                                                                      |
+|:-----: |--------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **SP1**| 11 – 26 / 04       | • Análise de viabilidade das APIs<br>• Priorização completa do backlog<br>• Rascunho inicial da ERS            | ERS v0.1 • Backlog priorizado • Documento de planejamento                        |
+| **SP2**| 27 / 04 – 10 / 05  | • Definição da arquitetura (cliente / servidor / cache)<br>• Protótipo navegável hospedado no **lovable.dev**  | Documento de Arquitetura • Protótipo navegável                                   |
+| **SP3**| 11 – 25 / 05       | • Wrapper ORCID + Semantic Scholar com cache local<br>• Estrutura inicial de BD<br>• Renderização de grafo estático | **MVP 0** – backend operante + grafo simples                                     |
+| **SP4**| 26 / 05 – 08 / 06  | • Implementar RF-001 → RF-005<br>• Telas de busca e filtros<br>• Cobertura de testes unitários iniciais         | Demo funcional • Relatório de testes v1                                          |
+| **SP5**| 09 – 22 / 06       | • Implementar RF-006 → RF-010 (incl. ajuste no RF-008)<br>• Otimizações de performance<br>• Guia do usuário    | **Versão Beta Final** do software + documentação de usuário                      |
 
----
-
-<!-- ==================== Riscos ==================== -->
-<div id="riscos"></div>
-
-## Gerenciamento de Riscos
-
-| Risco                                         | Prob. | Impacto | Mitigação                          |
-|-----------------------------------------------|:----:|:-------:|------------------------------------|
-| Limite da API ORCID                           |  M   |   A     | Cache + fallback JSON dumps        |
-| Desempenho WebGL em hardware fraco            |  M   |   M     | Degradar para canvas 2D            |
-| Conflitos de merge                            |  M   |   M     | PR template + revisão em 2 pares   |
-| Sobrecarga de tarefas (final de semestre)     |  H   |   M     | Buffer de 1 semana no cronograma   |
 
 ---
 
@@ -278,7 +240,6 @@ Distribuído sob a licença **MIT** – consulte o arquivo [`LICENSE`](LICENSE) 
 ## Agradecimentos
 
 - Prof. Dr. **Seiji Isotani** pela orientação na disciplina.  
-- Comunidade **ORCID** & **Sigma.js** pelo código aberto que tornou o projeto possível.  
 - Turma **SCC0130 (2025.1)** pelo feedback contínuo.
 
 ---
@@ -290,10 +251,4 @@ Distribuído sob a licença **MIT** – consulte o arquivo [`LICENSE`](LICENSE) 
 | Vinicius G. Neves               | 14749363| [viniciusgustierrez@usp.br](mailto:viniciusgustierrez@usp.br) |
 | Felipe V. de Oliveira           | 14570041| [felipe.volkweis@usp.br](mailto:felipe.volkweis@usp.br) |
 | Luiz Felipe Catuzzi             | 11871198| [fellipecatuzzi@usp.br](mailto:fellipecatuzzi@usp.br) |
-
-
-> **Como usar:**  
-> 1. Cole este bloco em `README.md` na raiz do repositório.  
-> 2. Substitua `assets/preview.png` por uma captura ou GIF real do **Sci-Graph**.  
-> 3. Atualize links para OneDrive/Notion ou artefatos locais, se necessário.
 
